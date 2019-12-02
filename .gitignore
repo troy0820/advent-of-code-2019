@@ -1,0 +1,5 @@
+Makefile
+.DS_Store
+*.txt
+!VERSION.txt
+*.yaml

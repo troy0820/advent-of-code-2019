@@ -28,24 +28,22 @@ func main() {
 	copy(solution, m)
 	for i := 0; i < len(m); i = i + 4 {
 		if m[i] == 1 {
-			pos := m[i+1]
-			pos2 := m[i+2]
-			out := m[i+3]
-			solution[out] = m[pos] + m[pos2]
-			copy(m, solution)
+			solution[m[i+3]] = m[m[i+1]] + m[m[i+2]]
+			if m[i+4] == 99 {
+			} else {
+				copy(m, solution)
+			}
 		}
 		if m[i] == 2 {
-			pos := m[i+1]
-			pos2 := m[i+2]
-			out := m[i+3]
-			solution[out] = m[pos] * m[pos2]
-			copy(m, solution)
+			solution[m[i+3]] = m[m[i+1]] * m[m[i+2]]
+			if m[i+4] == 99 {
+			} else {
+				copy(m, solution)
+			}
 		}
 		if m[i] == 99 {
 			fmt.Println("stopping program: ")
 			fmt.Println("solution:", solution)
 		}
 	}
-
-	fmt.Println("length of solution array", len(solution))
 }

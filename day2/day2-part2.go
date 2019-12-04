@@ -37,7 +37,7 @@ func main() {
 					solution[solution[i+3]] = solution[solution[i+1]] * solution[solution[i+2]]
 				}
 				if solution[0] == 19690720 {
-					fmt.Printf("Noun: %d Verb: %d, Solution: %d \n", noun, verb, 100*noun+verb)
+					fmt.Printf("Noun: %d, Verb: %d, Solution: %d \n", noun, verb, 100*noun+verb)
 					break
 				}
 			}

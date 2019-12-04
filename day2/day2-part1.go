@@ -26,6 +26,7 @@ func main() {
 	m := ConvertToInts(input)
 	solution := make([]int, len(m))
 	copy(solution, m)
+	solution[1], solution[2] = 12, 2
 	for i := 0; i < len(m); i = i + 4 {
 		if m[i] == 1 {
 			solution[m[i+3]] = m[m[i+1]] + m[m[i+2]]
@@ -42,8 +43,7 @@ func main() {
 			}
 		}
 		if m[i] == 99 {
-			fmt.Println("stopping program: ")
-			fmt.Println("solution:", solution)
+			fmt.Println("solution:", solution[0])
 		}
 	}
 }
